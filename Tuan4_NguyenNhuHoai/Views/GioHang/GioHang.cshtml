@@ -11,8 +11,8 @@
         <th>@Html.DisplayNameFor(model => model.tensach)</th>
         <th>@Html.DisplayNameFor(model => model.hinh) </th>
         <th>@Html.DisplayNameFor(model => model.giaban) </th>
-        <th>@Html.DisplayNameFor(model => model.iSoLuong) </th>
-        <th>@Html.DisplayNameFor(model => model.dThanhTien)</th>
+        <th>@Html.DisplayNameFor(model => model.iSoluong) </th>
+        <th>@Html.DisplayNameFor(model => model.dThanhtien)</th>
         <th></th>
         <th></th>
     </tr>
@@ -24,8 +24,8 @@
             @using (Html.BeginForm("CapnhatGiohang", "GioHang", new { @id = item.masach }))
             {
                 <td> @String.Format("{0:0,0}", item.giaban) VNĐ </td>
-                <td> <input type="number" min="1" name="txtSoLg" value="@item.iSoLuong" /> </td>
-                <td> @Html.DisplayFor(modelItem => item.dThanhTien)</td>
+                <td> <input type="number" min="1" name="txtSoLg" value="@item.iSoluong" /> </td>
+                <td> @Html.DisplayFor(modelItem => item.dThanhtien)</td>
                 <td>
                     <a href="@Url.Action("Detail", "Sach", new {id = item.masach})">Chi tiết</a> |
                     @Html.ActionLink("Xóa", "XoaGiohang", new { @id = item.masach })

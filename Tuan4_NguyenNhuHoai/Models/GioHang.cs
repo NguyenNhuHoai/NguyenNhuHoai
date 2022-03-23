@@ -10,21 +10,23 @@ namespace Tuan4_NguyenNhuHoai.Models
     {
         MyDataDataContext data = new MyDataDataContext();
         public int masach { get; set; }
-
         [Display(Name = "Tên sách")]
         public string tensach { get; set; }
-
-        [Display(Name ="Ảnh bìa")]
+        [Display(Name = "Ảnh sách")]
         public string hinh { get; set; }
-        [Display(Name ="Giá bán")]
-        public double giaban { get; set; }
-        [Display (Name ="Số lượng")]
-        public int iSoLuong { get; set; }
-        [Display(Name ="Thành tiền")]
-        public double dThanhTien
+
+        [Display(Name = "Giá bán")]
+        public Double giaban { get; set; }
+
+        [Display(Name = "Số lượng")]
+        public int iSoluong { get; set; }
+
+        [Display(Name = "Thành tiền")]
+        public Double dThanhtien
         {
-            get { return iSoLuong * giaban; }
+            get { return iSoluong * giaban; }
         }
+
         public GioHang(int id)
         {
             masach = id;
@@ -32,7 +34,7 @@ namespace Tuan4_NguyenNhuHoai.Models
             tensach = sach.tensach;
             hinh = sach.hinh;
             giaban = double.Parse(sach.giaban.ToString());
-            iSoLuong = 1;
+            iSoluong = 1;
         }
     }
 }
